@@ -1,4 +1,4 @@
-# StudentsJDBC
+# Lab 1: JDBC Student Database Project
 
 **Lab Assignment 1: Enterprise Application Development**
 **Topic:** Java Database Connectivity (JDBC) with MySQL
@@ -68,7 +68,7 @@ Tasks 2, 4 and 5 change the data, so run them in order (1 to 6) for the results 
 ## Project structure
 
 ```
-StudentsJDBC
+EAD-kalkidan-asdesach-ate-5481-16
 ├── pom.xml                      Maven configuration (includes the MySQL driver)
 ├── config.properties.example    Template for database settings
 ├── .gitignore
@@ -86,15 +86,15 @@ StudentsJDBC
 
 1. Install JDK 17 or higher, Maven (or use IntelliJ's built-in Maven), and MySQL Server 8.0. Make sure the MySQL service is running.
 2. Clone the repository and open it in IntelliJ IDEA:
-   ```
-   git clone https://github.com/kal1kidan/StudentsJDBC.git
-   ```
+```
+   git clone https://github.com/AAU-CTBE-SiTE/EAD-kalkidan-asdesach-ate-5481-16.git
+```
 3. Copy `config.properties.example` to a new file named `config.properties` in the project root, and put in your own MySQL password:
-   ```
+```
    db.url=jdbc:mysql://localhost:3306/
    db.user=root
    db.password=YOUR_PASSWORD_HERE
-   ```
+```
 4. Let Maven download the dependencies (IntelliJ does this automatically, or click the Maven reload button).
 5. Run the classes one at a time, in order, from `Task1` to `Task6`, by clicking the green arrow next to `main`.
 
