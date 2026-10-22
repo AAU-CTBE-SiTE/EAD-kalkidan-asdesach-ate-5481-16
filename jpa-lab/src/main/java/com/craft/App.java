@@ -48,6 +48,16 @@ public class App {
         entityManager.getTransaction().commit();
     }
 
+    public static void deleteStudent(int id) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+
+        Student student = entityManager.find(Student.class, id);
+
+        entityManager.remove(student);
+        entityManager.getTransaction().commit();
+    }
+
     public static void main(String[] args) {
         Student student1 = new Student();
         student1.setName("Mohammed ali");
@@ -55,7 +65,7 @@ public class App {
 
 //        createStudent(student1);
 
-        updateStudentNameAndTech("Alemayehu Bekele", "Java", 2);
+        deleteStudent(2);
         System.out.println(getStudentById(2));
     }
 }
