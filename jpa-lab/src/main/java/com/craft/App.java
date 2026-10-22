@@ -22,11 +22,18 @@ public class App {
         entityManager.getTransaction().commit();
     }
 
+    public static Student getStudentById(int id) {
+        EntityManager entityManager = getEntityManager();
+        return entityManager.find(Student.class, id);
+    }
+
     public static void main(String[] args) {
         Student student1 = new Student();
         student1.setName("Mohammed ali");
         student1.setTech("Python");
 
-        createStudent(student1);
+//        createStudent(student1);
+
+        System.out.println(getStudentById(2));
     }
 }
