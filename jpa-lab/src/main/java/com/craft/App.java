@@ -16,13 +16,13 @@ public class App {
         EntityManager em = emf.createEntityManager();
 
         EntityTransaction entityTransaction = em.getTransaction();
+//        entityTransaction.begin();
+//        em.persist(student);
 
-        entityTransaction.begin();
+        Student fetchedStudent = em.find(Student.class, 1);
 
-        em.persist(student);
-
-        entityTransaction.commit();
-
+//        entityTransaction.commit();
+        System.out.println("Fetched: " + fetchedStudent);
         em.close();
     }
 }
