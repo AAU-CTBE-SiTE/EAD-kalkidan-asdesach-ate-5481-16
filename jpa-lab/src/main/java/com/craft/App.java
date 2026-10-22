@@ -48,7 +48,7 @@ public class App {
         entityManager.getTransaction().commit();
     }
 
-    public static void deleteStudent(int id) {
+    public static void deleteStudentById(int id) {
         EntityManager entityManager = getEntityManager();
         entityManager.getTransaction().begin();
 
@@ -65,7 +65,7 @@ public class App {
 
 //        createStudent(student1);
 
-        deleteStudent(2);
+        deleteStudentById(2);
         System.out.println(getStudentById(2));
     }
 }
