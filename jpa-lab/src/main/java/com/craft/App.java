@@ -27,6 +27,16 @@ public class App {
         return entityManager.find(Student.class, id);
     }
 
+    public static void updateStudentName(String newName, int id) {
+        EntityManager entityManager = getEntityManager();
+        entityManager.getTransaction().begin();
+
+        Student student = entityManager.find(Student.class, id);
+
+        student.setName(newName);
+        entityManager.getTransaction().commit();
+    }
+
     public static void main(String[] args) {
         Student student1 = new Student();
         student1.setName("Mohammed ali");
@@ -34,6 +44,7 @@ public class App {
 
 //        createStudent(student1);
 
+        updateStudentName("Alemayehu", 2);
         System.out.println(getStudentById(2));
     }
 }
