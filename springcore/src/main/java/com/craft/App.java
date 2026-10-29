@@ -7,11 +7,9 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext context = new
                 ClassPathXmlApplicationContext("beansConfig.xml");
+
         Student student = context.getBean("student", Student.class);
 
-        student.getDetails();
-
-        System.out.println("Student Name: " + student.getName());
         System.out.println(student);
 
     }
