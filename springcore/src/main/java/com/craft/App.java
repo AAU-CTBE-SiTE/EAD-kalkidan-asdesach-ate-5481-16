@@ -9,11 +9,10 @@ public class App {
                 ClassPathXmlApplicationContext("beansConfig.xml");
         Student student = context.getBean("student", Student.class);
 
-        student.setId(101);
-        student.setName("John");
-        student.setAge(34);
-
         student.getDetails();
+
+        System.out.println("Student Name: " + student.getName());
+        System.out.println(student);
 
     }
 }
