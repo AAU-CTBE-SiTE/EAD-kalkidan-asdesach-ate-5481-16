@@ -1,8 +1,16 @@
 package com.craft;
 
-public class Student {
+import lombok.Data;
+import lombok.ToString;
 
-    public void getHello() {
-        System.out.println("Hello Springers");
+@Data
+@ToString
+public class Student {
+    private int id;
+    private String name;
+    private int age;
+
+    public void getDetails() {
+        System.out.println("Student Details " + this);
     }
 }
